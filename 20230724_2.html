@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("header").css({"background-color":"red", "text-align":"center"})
+        });
+        $(document).ready(function(){
+            $("#easy").css({
+            "border":"2px dashed orange", "text-align": "right", "padding": "10px"})
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>제이쿼리 1탄 작업 중...</h1>
+    </header>
+    <main>
+        <p>제이쿼리를 작성해봅니다</p>
+        <p id="easy">제이쿼리는 기존 스크립트 보다는 쉬운 라이브러리입니다.</p>
+        <!--
+            id 이름 작성시 고려할 것
+            - 별명 지을 때, 숫자, 특수문자, 대문자로 시작하면 안됩니다.
+        -->
+    </main>
+</body>
+</html>

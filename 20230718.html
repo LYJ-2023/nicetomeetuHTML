@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //B.O.M 객체 사용해보기
+        //Brower.Object.Model의 줄임말/ 브라우저 = 구글, 사파리, 파이어폭스..
+        //메인이 되는 객체 : window
+            //속해잇는 객체 : location, screen, history, navi, document
+        //window 기준 ㅁ낳이 볼 수 있는 메서드 : window.open(); / window.close();
+        //window.open('어떤 걸 새창으로 띄울건지', '윈도우 이름', '옵션 = 값', '옵션 =')
+            //.open 매서드 괄호 안에 넣을 수 있는 옵션들...
+                //width와 height, left, top = 크기나 위치
+                //location(주소창을 보여줄건가 말건가 show || hide)
+                //scrollbars(스크롤바를 보여줄건가 말건가 yes || no)
+                //menubar(메뉴바를 보여줄건가 말건가 show || hide)
+                //toolbar(툴바를 보여줄건가 말건가 show || hide)
+                //status(툴바를 보여줄건가 말건가 show || hide)
+        //window 기준 이런 매서드도 같이 봅시다!
+            //setInterval(인터벌) = 일정 시간마다 어떠한 함수를 반복
+            //setTimeout = delay and start 설정해둔 시간이 흐른 뒤에 1번만 실행
+            //clearTimeout, clearInterval = 반복을 해제하는 매서드
+        
+        
+        //location 객체 : 웹브라우저의 URL(주소)에 관련된 내용
+
+        window.onload = function(){
+            const btn = document.getElementById('btn');
+            btn.onclick = function(){
+                window.open('http://www.naver.com', '네이버', 'width=360', 'heigth=360', 'left=100', 'top=100');
+            }
+        }
+    </script>
+    <button id="btn">새 창 열기</button>
+</body>
+</html>

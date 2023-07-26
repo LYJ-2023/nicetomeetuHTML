@@ -1,0 +1,60 @@
+/*커스텀 속성(CSS계의 변수)*/
+:root{
+    --main-color: rgba(100, 200, 180);
+    --bg-color: rgba(100, 230, 260, 0.2);
+}
+/*
+1. 대문자, 소문자 둘다 쓸 수 있지만, BG와 bg는 각기 다른 변수로 인지하게 됩니다.
+2. 단위는 호출하는 데에서는 사용하지 않고, 위 루트 만들 때 같이 사용하면 됩니다.
+3. 커스텀 속성 값을 넣는데, 속성은 못 넣습니다.
+*/
+
+#hero{
+    height: 100vh;
+    display: flex;
+    /*justify-content: ;*/
+    align-items: center;
+    background-image: url('./compuH.jpeg'), url('./muny4.jpg');
+    background-size: cover;
+    /*object-fit: cover;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg-color);
+    background-blend-mode: lighten;
+    animation: bg-color 24s infinite;
+    text-align: center;
+    font-family: 'Impact', sans-serif;
+    line-height: 1.5;
+}
+@keyframes bg-color {
+    0%{background-color: darkblue;}
+    12.5%{background-color: darkcyan;}
+    25%{background-color: darkgoldenrod;}
+    36%{background-color: darkorange;}
+    50%{background-color: darkred;}
+    63.5%{background-color: darkorchid;}
+    75%{background-color: darkmagenta;}
+    88%{background-color: darkslateblue;}
+    100%{background-color: dodgerblue;}
+}
+/*애니메이션 에는 어떤 속성이 들어있을까?*/
+
+/*div{
+    animation-timing-function: ; 속도, 타이밍 ease, ease-out 둥둥
+    animation-duration: ; 실행 시작부터 종료까지 걸리는 시간 5s, 5ms 소수점도 사용가능
+    animation-name: ; @키프레임 박스 이름이었던 것이다...
+    animation-delay: ; 시작을 기다리는 시간
+    animation-direction: ; 방향 nomal - 기본 방향, alternate - 홀수번째 돌고 있을 때는 정방향, 짝수번째 돌고 있을 때는 역방향 (와리가리), reverse - 반대방향으로 재생, alterbate-reverse - 얼터네이트 효과를 역으로 재생
+    animation-fill-mode: ; 애니메이션이 끝난 후 상태, none - 딱히 없음, fowards - 재생한 다음 끝났을 때 마지막 프레임으로 상태 유지시킴, backwards - 재생한 다음 끝났을 때 첫번째 프레임으로 상태 유지시킴, both - fowards & backwards 둘다 
+    animation-play-state: ; 재생 or 일시정지, running - 기본상태, paused - 일시 멈춤
+    animation-iteration-count: ; 반복 몇 번? infinite - 무한 루프 계속 반복(숫자 입력하면 그 횟수만큼 합니다.) 
+}*/
+
+h1{
+    font-size: 6rem;
+    font-weight: bold;
+    mix-blend-mode: overlay;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: lightyellow;
+    color: var(--main-color);
+}

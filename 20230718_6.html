@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 구문 || 제이쿼리 구문</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>단락입니다.</p>
+    <button>배경 색상을 변경해봅시다.</button>
+    <script>
+        //자바스크립트 DOM구조의 document 객체로, 특정 부분 배경색 변경하기
+        /*document.querySelector('button').addEventListener('click', function(){
+            document.querySelectorAll('p').forEach(function(p){
+                p.style.backgroundColor = '#f349';
+            })
+        })*/6
+
+        //제이쿼리
+        $('button').click(function(){
+            $('p').css('backgroundColor', '#f349');
+        });
+
+        //제이쿼리 : 작성해야할 구문이 싹 줄어든다.
+        //제이쿼리 : 최신 버전의 자바스크립트를 사용하는 것이 너도 나도 이로운 추세입니다.
+        
+    </script>
+</body>
+</html>

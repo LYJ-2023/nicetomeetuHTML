@@ -1,0 +1,20 @@
+div{
+    /*기본 옵션*/
+    background-color: pink;
+    padding: 1rem;
+    display: inline-block;
+    animation-name: box;
+}
+
+/*키 프레임 애니메이션 살펴보기*/
+@keyframes box {
+    0%{
+        background-color: skyblue;
+    }
+    50%{
+        background-color: lightgreen;
+    }
+    100%{
+        background-color: yellow;
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/browse/destyle.css@4.0.0/">
+    <style>
+        :root{
+            --font: #B90000;
+            --navbg: black;
+            --red: #800000;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nosifer', cursive;
+        }
+        /*헤더 영역 ------------------------------------------------------*/
+        .wrapper{
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        header{
+            background: var(--navbg);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+        header .wrapper{
+            display: flex;
+            justify-content: space-between;
+        }
+        header a{
+            color: var(--font);
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        /*메뉴 영역 ------------------------------------------------------*/
+        .btn_menu{
+            background-color: var(--navbg);
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            border: 1px solid #B90000;
+            color: var(--font);
+            padding: .5rem 1rem;
+        }
+        .main_nav{
+            background-color: var(--navbg);
+            width: 0%;
+            position: absolute;
+            z-index: 2;
+            top: 50px;
+            right: 0;
+            overflow: hidden;
+            list-style-type: none;
+            transition-duration: .5s;
+            padding-top: .5rem;
+            color: var(--font);
+        }
+        .main_nav li{
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .main_nav a{
+            display: block;
+        }
+        .main_nav.open_menu{
+            width: 100%;
+        }
+
+        /*반응형 만들어주기*/
+            /*1탄 : 웹 일때*/
+            @media(min-width:600px){
+                h2{font-size: 5rem;}
+                a:hover{
+                    color: var(--red);
+                }
+                a:hover{transition: .3s;}
+                .btn_menu{
+                    display: none;
+                }
+                .main_nav{
+                    display: flex;
+                    width: 100%;
+                    position: static;
+                }
+                .main_nav li{
+                    margin: 0 0 0 2rem;
+                }
+            }
+            /*1탄 : 웹 일때*/
+            /*1탄 : 웹 일때*/
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="#hero" class="logo">logo</a>
+            <nav>
+                <button class="btn_menu">Menu</button>
+                <ul class="main_nav">
+                    <li a href="#about">About</li>
+                    <li a href="#news">News</li>
+                    <li a href="#speakers">Speakers</li>
+                    <li a href="#ticket">Ticket</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--자바스크립트 자리..-->
+    <script>
+        const btn = document.querySelector('.btn_menu');
+            const nav = document.querySelector('.main_nav');
+
+            btn.addEventListener('click', () => {
+                nav.classList.toggle('open_menu');
+                if (btn.innerHTML === 'Menu') {
+                    btn.innerHTML = 'Close';
+                } else {
+                    btn.innerHTML = 'Menu';
+                }
+            });
+    </script>
+</body>
+</html>

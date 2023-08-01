@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: skyblue;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        //암호 확인 스크립트를 작성합니다 (도둑방지용)
+        function checkPassword() {
+            //1. 변수를 두개 만들기
+            //1. 사용자가 입력한 값을 저장하는 변수
+            //2. 참거짓을 판단해서 행동하는 변수
+            var password = document.getElementById("passwordBox");
+            var passwordEntered = password.value;
+            if (passwordEntered === "Ernest300") {
+                return true;
+            }
+            alert("도둑잡아라!");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <p style="font-size: 32pt;">THE MONK DIAMOND DISCOVERY</p>
+    <p>Please enter the password to view this website.</p>
+    <p>PASSWORD : <input type="password" id="passwordBox"></p>
+    <a href="./TheMonkDi.html" target="_blank" onclick="checkPassword();"> Click here to submit password</a>
+</body>
+</html>

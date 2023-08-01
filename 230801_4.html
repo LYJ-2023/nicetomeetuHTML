@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {   
+            //버튼 1은 클릭했을 때 숨겨질 것이다. 
+            $('#btn1').click(function(){
+                $('p').hide();
+            });
+            //버튼 2은 클릭했을 보여질 것이다. 
+            $('#btn2').click(function(){
+                $('p').show();
+            });
+            //버튼 3은 클릭했을 때 보였다 안보였다 할 것이다.
+            $('#btn3').click(function(){
+                $('p').toggle();
+            })
+
+
+            
+
+
+        });
+    </script>
+</head>
+<body>
+    <button id="btn1">hide()</button>
+    <button id="btn2">show()</button>
+    <button id="btn3">toggle()</button>
+
+    <p style="background-color:yellow;">
+        어려울 때 친구가 진정한 친구다.
+    </p>
+</body>
+</html>
